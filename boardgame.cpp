@@ -1,12 +1,19 @@
 #include <iostream>
+#include <csignal>
 #include "gamename.h"
 #include "affo.h"
 #include "westernTrail.h"
+#include "tfm.h"
 using namespace std;
+
+//global variable
 
 //function declaration
 int loadBoardGame();
 void initBoardInstance(int type);
+void sighandler(int s);
+
+
 
 //int main() to init the program
 
@@ -47,6 +54,12 @@ void initBoardInstance(int type){
 			OdinFeast feast;
 			cout << game.game[type] << endl <<endl;
 			feast.printSetup();
+			break;
+		case 1:
+			TerraMars mars;
+			cout << game.game[type] << endl << endl;
+			mars.printStarter();
+			mars.resourceTracking();
 			break;
 		case 2:
 			WesternTrail GWT;
