@@ -1,6 +1,7 @@
 #include <iostream>
 #include "gamename.h"
 #include "affo.h"
+#include "westernTrail.h"
 using namespace std;
 
 //function declaration
@@ -46,6 +47,11 @@ void initBoardInstance(int type){
 			OdinFeast feast;
 			cout << game.game[type] << endl <<endl;
 			feast.printSetup();
+			break;
+		case 2:
+			WesternTrail GWT;
+			cout << game.game[type] << endl << endl;
+			GWT.printSetup();
 			break;
 		default:
 			cout << "Still in development" << endl; 
